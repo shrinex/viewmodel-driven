@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:viewmodel_driven/src/view_model_types.dart';
 
-/// 创建ViewModel
+/// A factory that produces [ViewModel]
 abstract class ViewModelProvider<T extends ViewModel> {
   const ViewModelProvider();
 
@@ -16,8 +16,7 @@ abstract class ViewModelProvider<T extends ViewModel> {
   T createViewModel();
 }
 
-/// 给[State]混入ViewModel
-/// 此mixin会管理ViewModel的生命周期，解放客户端的心智负担
+/// Helps manage the lifecycle of [ViewModel]
 mixin ViewModelProviderStateMixin<T extends StatefulWidget, U extends ViewModel>
     on State<T> implements ViewModelProvider<U> {
   late U viewModel;

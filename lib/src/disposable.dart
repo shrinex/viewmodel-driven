@@ -7,7 +7,8 @@
 
 import 'package:flutter/material.dart';
 
-/// 资源清理
+/// Clean up associated resources, typically
+/// called in [State.dispose]
 abstract class Disposable {
   /// See also:
   /// - [State.dispose]

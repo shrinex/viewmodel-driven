@@ -7,14 +7,16 @@
 
 import 'package:viewmodel_driven/src/disposable.dart';
 
-/// 代表输入，比如按钮点击、请求网络数据等等
+/// Represents input events, such as clicks the button
+/// or fires a HTTP request, etc
 abstract class ViewModelInputs {}
 
-/// 代表输出，比如响应按钮点击进入下一页、通过
-/// 网络获取到新数据等等
+/// Represent output events, such as enters another page
+/// in response of clicks the button, or receives new data
+/// through the network, etc
 abstract class ViewModelOutputs {}
 
-/// ViewModel就是一座连接输入与输出的桥梁
+/// ViewModel acts as a bridge connecting input and output
 abstract class ViewModel extends Disposable {
   ViewModelInputs get inputs;
 
